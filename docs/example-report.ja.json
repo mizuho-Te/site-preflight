@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "tool_version": "0.1.0",
+  "language": "ja",
+  "coverage": {
+    "external_or_scheme_refs_unchecked": 0,
+    "base_page_refs_unchecked": 0,
+    "local_refs_checked": 3,
+    "fragment_targets_unchecked": 0
+  },
+  "limitations": [
+    "No network or JavaScript rendering",
+    "No full SEO or accessibility audit",
+    "No ranking guarantee",
+    "No server rewrite inference",
+    "robots/sitemap existence only; contents not validated"
+  ],
+  "pages_checked": 1,
+  "summary": {
+    "error": 3,
+    "warning": 5,
+    "info": 2
+  },
+  "findings": [
+    {
+      "code": "description.missing",
+      "severity": "warning",
+      "path": "index.html",
+      "line": 0,
+      "detail": "",
+      "message": "空でない meta description を設定してください。"
+    },
+    {
+      "code": "h1.count",
+      "severity": "warning",
+      "path": "index.html",
+      "line": 0,
+      "detail": "2",
+      "message": "H1 の数を確認してください（本ツールでは 1 個を推奨）。"
+    },
+    {
+      "code": "title.missing",
+      "severity": "error",
+      "path": "index.html",
+      "line": 0,
+      "detail": "",
+      "message": "空でないページタイトルを設定してください。"
+    },
+    {
+      "code": "canonical.invalid",
+      "severity": "warning",
+      "path": "index.html",
+      "line": 2,
+      "detail": "/",
+      "message": "canonical はフラグメントのない HTTP(S) 絶対 URL にしてください。"
+    },
+    {
+      "code": "image.alt",
+      "severity": "warning",
+      "path": "index.html",
+      "line": 2,
+      "detail": "",
+      "message": "画像に alt がありません。説明文、または装飾画像なら空の alt を設定してください。"
+    },
+    {
+      "code": "link.anchor",
+      "severity": "warning",
+      "path": "index.html",
+      "line": 2,
+      "detail": "#missing-id",
+      "message": "リンク先 HTML にフラグメントの ID/name がありません。"
+    },
+    {
+      "code": "link.missing",
+      "severity": "error",
+      "path": "index.html",
+      "line": 2,
+      "detail": "missing.html",
+      "message": "ローカルのリンク先が存在しません。"
+    },
+    {
+      "code": "link.missing",
+      "severity": "error",
+      "path": "index.html",
+      "line": 2,
+      "detail": "missing.png",
+      "message": "ローカルのリンク先が存在しません。"
+    },
+    {
+      "code": "robots.missing",
+      "severity": "info",
+      "path": "robots.txt",
+      "line": 0,
+      "detail": "",
+      "message": "ルートに robots.txt がありません（必須とは限りません）。"
+    },
+    {
+      "code": "sitemap.missing",
+      "severity": "info",
+      "path": "sitemap.xml",
+      "line": 0,
+      "detail": "",
+      "message": "ルートに sitemap.xml がありません（必須とは限りません）。"
+    }
+  ]
+}

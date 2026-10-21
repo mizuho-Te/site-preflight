@@ -1,0 +1,53 @@
+test_asset_link (test_audit.AuditTests.test_asset_link) ... ok
+test_bad_canonical_host_or_port (test_audit.AuditTests.test_bad_canonical_host_or_port) ... ok
+test_base_skips_resolution (test_audit.AuditTests.test_base_skips_resolution) ... ok
+test_canonical_fragment (test_audit.AuditTests.test_canonical_fragment) ... ok
+test_clean (test_audit.AuditTests.test_clean) ... ok
+test_cli_clean (test_audit.AuditTests.test_cli_clean) ... ok
+test_cli_error (test_audit.AuditTests.test_cli_error) ... ok
+test_cli_json (test_audit.AuditTests.test_cli_json) ... ok
+test_cli_warning_policy (test_audit.AuditTests.test_cli_warning_policy) ... ok
+test_controls_escaped_in_text (test_audit.AuditTests.test_controls_escaped_in_text) ... ok
+test_coverage_base (test_audit.AuditTests.test_coverage_base) ... ok
+test_coverage_external (test_audit.AuditTests.test_coverage_external) ... ok
+test_deterministic (test_audit.AuditTests.test_deterministic) ... ok
+test_directory_error_reported (test_audit.AuditTests.test_directory_error_reported) ... ok
+test_directory_index (test_audit.AuditTests.test_directory_index) ... ok
+test_duplicate_description (test_audit.AuditTests.test_duplicate_description) ... ok
+test_duplicate_title (test_audit.AuditTests.test_duplicate_title) ... ok
+test_empty_alt_allowed (test_audit.AuditTests.test_empty_alt_allowed) ... ok
+test_empty_site (test_audit.AuditTests.test_empty_site) ... ok
+test_empty_title (test_audit.AuditTests.test_empty_title) ... ok
+test_encoded_traversal_blocked (test_audit.AuditTests.test_encoded_traversal_blocked) ... ok
+test_extensionless_no_implicit_rewrite (test_audit.AuditTests.test_extensionless_no_implicit_rewrite) ... ok
+test_external_schemes_excluded (test_audit.AuditTests.test_external_schemes_excluded) ... ok
+test_fifo_skipped (test_audit.AuditTests.test_fifo_skipped) ... ok
+test_h1_review_not_error (test_audit.AuditTests.test_h1_review_not_error) ... ok
+test_index_htm (test_audit.AuditTests.test_index_htm) ... ok
+test_invalid_utf8 (test_audit.AuditTests.test_invalid_utf8) ... ok
+test_json_japanese (test_audit.AuditTests.test_json_japanese) ... ok
+test_large_html (test_audit.AuditTests.test_large_html) ... ok
+test_legacy_anchor (test_audit.AuditTests.test_legacy_anchor) ... ok
+test_missing_alt (test_audit.AuditTests.test_missing_alt) ... ok
+test_missing_description (test_audit.AuditTests.test_missing_description) ... ok
+test_missing_fragment (test_audit.AuditTests.test_missing_fragment) ... ok
+test_missing_local (test_audit.AuditTests.test_missing_local) ... ok
+test_missing_root_metadata_info (test_audit.AuditTests.test_missing_root_metadata_info) ... ok
+test_nonexistent_root (test_audit.AuditTests.test_nonexistent_root) ... ok
+test_null_path (test_audit.AuditTests.test_null_path) ... ok
+test_percent_path_and_anchor (test_audit.AuditTests.test_percent_path_and_anchor) ... ok
+test_query_and_fragment (test_audit.AuditTests.test_query_and_fragment) ... ok
+test_relative_canonical (test_audit.AuditTests.test_relative_canonical) ... ok
+test_root_symlink_ancestor_refused (test_audit.AuditTests.test_root_symlink_ancestor_refused) ... ok
+test_root_symlink_refused (test_audit.AuditTests.test_root_symlink_refused) ... ok
+test_safe_parent_navigation (test_audit.AuditTests.test_safe_parent_navigation) ... ok
+test_symlink_directory_not_followed (test_audit.AuditTests.test_symlink_directory_not_followed) ... ok
+test_symlink_not_read (test_audit.AuditTests.test_symlink_not_read) ... ok
+test_text_fragment_skipped (test_audit.AuditTests.test_text_fragment_skipped) ... ok
+test_top_and_combined_text_fragment (test_audit.AuditTests.test_top_and_combined_text_fragment) ... ok
+test_traversal_blocked (test_audit.AuditTests.test_traversal_blocked) ... ok
+
+----------------------------------------------------------------------
+Ran 48 tests in 0.047s
+
+OK

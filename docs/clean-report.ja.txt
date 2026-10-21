@@ -1,0 +1,4 @@
+点検ページ数: 2
+error: 0 | warning: 0 | info: 0
+検査範囲: {"external_or_scheme_refs_unchecked": 1, "base_page_refs_unchecked": 0, "local_refs_checked": 3, "fragment_targets_unchecked": 0}
+オフライン点検のみ。外部 URL は未検査。完全な SEO・アクセシビリティ監査ではありません。
