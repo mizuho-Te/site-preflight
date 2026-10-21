@@ -36,5 +36,17 @@ def main(argv=None):
     counts = result['summary']
     return int(args.fail_on != 'never' and (counts['error'] > 0 or (args.fail_on == 'warning' and counts['warning'] > 0)))
 
+def _configure_utf8_output():
+    """CLI output is UTF-8, including redirected Windows streams.
+
+    Keep this out of main() so callers retain control of their own streams.
+    """
+    for stream in (sys.stdout, sys.stderr):
+        reconfigure = getattr(stream, 'reconfigure', None)
+        if reconfigure is not None:
+            reconfigure(encoding='utf-8', errors='backslashreplace')
+
+
 if __name__ == '__main__':
+    _configure_utf8_output()
     sys.exit(main())

@@ -4,6 +4,8 @@ import json
 import os
 from pathlib import Path
 import tempfile
+import subprocess
+import sys
 import unittest
 from unittest.mock import patch
 from site_preflight.audit import inspect, report, MAX_HTML_BYTES
@@ -210,6 +212,45 @@ class AuditTests(unittest.TestCase):
         for bad in ('https://exa mple.test/', 'https://example.test:invalid/', 'https://user:pass@example.test/'):
             self.write('index.html', html().replace('https://example.test/', bad))
             self.assertIn('canonical.invalid', self.codes())
+    def run_legacy_encoding_cli(self, *args):
+        env = dict(os.environ, PYTHONIOENCODING='cp1252', PYTHONUTF8='0')
+        return subprocess.run(
+            [sys.executable, '-m', 'site_preflight', *args],
+            cwd=Path(__file__).resolve().parents[1], env=env,
+            capture_output=True, timeout=10, check=False,
+        )
+    def test_cli_japanese_text_with_legacy_stdout(self):
+        result = self.run_legacy_encoding_cli(str(self.root), '--lang', 'ja')
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn('点検ページ数: 1', result.stdout.decode('utf-8'))
+        self.assertEqual(result.stderr, b'')
+    def test_cli_japanese_json_with_legacy_stdout(self):
+        self.write('index.html', html('<img>'))
+        result = self.run_legacy_encoding_cli(str(self.root), '--lang', 'ja', '--format', 'json')
+        self.assertEqual(result.returncode, 0, result.stderr)
+        data = json.loads(result.stdout.decode('utf-8'))
+        self.assertIn('画像', next(f['message'] for f in data['findings'] if f['code'] == 'image.alt'))
+    def test_cli_invalid_japanese_path_with_legacy_stderr(self):
+        result = self.run_legacy_encoding_cli(str(self.root / '存在しない'))
+        self.assertEqual(result.returncode, 2)
+        self.assertEqual(result.stdout, b'')
+        self.assertIn('Site root must be an existing directory.', result.stderr.decode('utf-8'))
+    def test_cli_japanese_filesystem_error_with_legacy_stderr(self):
+        # A real Unicode-bearing OSError without platform-specific permission changes.
+        code = (
+            "from unittest.mock import patch; "
+            "from site_preflight.__main__ import main, _configure_utf8_output; "
+            "_configure_utf8_output(); "
+            "p = patch('site_preflight.__main__.report', side_effect=OSError('読み取り失敗')); "
+            "p.start(); raise SystemExit(main(['dummy']))"
+        )
+        env = dict(os.environ, PYTHONIOENCODING='cp1252', PYTHONUTF8='0')
+        result = subprocess.run(
+            [sys.executable, '-c', code], cwd=Path(__file__).resolve().parents[1],
+            env=env, capture_output=True, timeout=10, check=False,
+        )
+        self.assertEqual(result.returncode, 2)
+        self.assertIn('読み取り失敗', result.stderr.decode('utf-8'))
     def test_empty_site(self):
         (self.root / 'index.html').unlink()
         self.assertIn('site.empty', self.codes())
