@@ -5,6 +5,10 @@ test_canonical_fragment (test_audit.AuditTests.test_canonical_fragment) ... ok
 test_clean (test_audit.AuditTests.test_clean) ... ok
 test_cli_clean (test_audit.AuditTests.test_cli_clean) ... ok
 test_cli_error (test_audit.AuditTests.test_cli_error) ... ok
+test_cli_invalid_japanese_path_with_legacy_stderr (test_audit.AuditTests.test_cli_invalid_japanese_path_with_legacy_stderr) ... ok
+test_cli_japanese_filesystem_error_with_legacy_stderr (test_audit.AuditTests.test_cli_japanese_filesystem_error_with_legacy_stderr) ... ok
+test_cli_japanese_json_with_legacy_stdout (test_audit.AuditTests.test_cli_japanese_json_with_legacy_stdout) ... ok
+test_cli_japanese_text_with_legacy_stdout (test_audit.AuditTests.test_cli_japanese_text_with_legacy_stdout) ... ok
 test_cli_json (test_audit.AuditTests.test_cli_json) ... ok
 test_cli_warning_policy (test_audit.AuditTests.test_cli_warning_policy) ... ok
 test_controls_escaped_in_text (test_audit.AuditTests.test_controls_escaped_in_text) ... ok
@@ -48,6 +52,6 @@ test_top_and_combined_text_fragment (test_audit.AuditTests.test_top_and_combined
 test_traversal_blocked (test_audit.AuditTests.test_traversal_blocked) ... ok
 
 ----------------------------------------------------------------------
-Ran 48 tests in 0.047s
+Ran 52 tests in 0.340s
 
 OK

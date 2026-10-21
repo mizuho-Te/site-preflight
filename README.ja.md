@@ -56,3 +56,5 @@ python -m compileall -q site_preflight tests
 ## 他のツールとの関係
 
 第三者 Python 依存なし・日本語/英語・JSON の小さな公開前チェックが狙いです。新規性や優位性を保証せず、[HTML-validate](https://html-validate.org/)、[lychee](https://github.com/lycheeverse/lychee)、[Pa11y](https://pa11y.org/)、[Lighthouse](https://developer.chrome.com/docs/lighthouse/overview) 等の代替を目指すものではありません。
+
+CLI の標準出力・標準エラー出力は UTF-8 です。2026-10-21、Ubuntu・Windows・macOS × Python 3.11 / 3.12 / 3.13 の 9 通りの CI が成功しました。[検証結果](https://github.com/mizuho-Te/site-preflight/actions/runs/39561280839)。Windows では FIFO 非対応のテストをスキップします。

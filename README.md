@@ -53,7 +53,7 @@ python -m unittest discover -s tests -v
 python -m compileall -q site_preflight tests
 ```
 
-Synthetic fixtures only. The clean fixture should return 0; the broken fixture intentionally returns 1. The included GitHub Actions configuration is a CI workflow configuration, not evidence that remote CI has run.
+Synthetic fixtures only. The clean fixture should return 0; the broken fixture intentionally returns 1. [Verified CI](https://github.com/mizuho-Te/site-preflight/actions/runs/39561280839): all 9 OS/Python combinations passed on 2026-10-21; see docs/VERIFICATION.md. CLI stdout/stderr use UTF-8, including redirected Windows output.
 
 ## Why another checklist?
 

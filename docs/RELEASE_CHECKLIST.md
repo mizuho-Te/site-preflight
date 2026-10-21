@@ -8,7 +8,7 @@ Before any public release:
 - [x] MIT license approved, attributed to the public GitHub handle mizuho-Te.
 - [x] Public release authorized; authenticated connector account is mizuho-Te. No customer repositories/data.
 - [ ] Establish a private security-reporting channel and update SECURITY.md.
-- [ ] Review GitHub Actions permissions and run CI on the intended supported platforms.
+- [x] Read-only Actions permissions reviewed; 9 OS/Python combinations passed on 2026-10-21.
 - [ ] Test on actual exports with permission, document limitations, and remove sensitive fixtures.
 - [ ] Have a human check Japanese/English instructions and first-run usability.
 - [ ] Tag and publish only after those decisions. No registry publishing or credentials are required for the source-only first release.
