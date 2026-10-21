@@ -8,7 +8,7 @@ A small offline preflight checklist for exported static HTML sites. Python 3.11+
 
 ## Try it
 
-Download/extract the review bundle and open a terminal in this directory. Nothing needs to be installed from a package registry.
+Clone this repository or download/extract its source ZIP and open a terminal in this directory. Nothing needs to be installed from a package registry.
 
 ```sh
 python -m site_preflight examples/clean --lang en
@@ -59,4 +59,4 @@ Synthetic fixtures only. The clean fixture should return 0; the broken fixture i
 
 This project combines a narrow static-export checklist, no third-party Python packages, Japanese/English findings and JSON rule codes. It is complementary to established tools, not a claim of unique coverage or superiority. For broader work consider [HTML-validate](https://html-validate.org/), [lychee](https://github.com/lycheeverse/lychee), [Pa11y](https://pa11y.org/), and [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview).
 
-See [CONTRIBUTING](CONTRIBUTING.md), [SECURITY](SECURITY.md), and [release checklist](docs/RELEASE_CHECKLIST.md). Public repository links and maintainer contact will be added only after owner approval.
+See [CONTRIBUTING](CONTRIBUTING.md), [SECURITY](SECURITY.md), and [release checklist](docs/RELEASE_CHECKLIST.md). Public repository: https://github.com/mizuho-Te/site-preflight . Use issues for non-sensitive bug reports; a private security-reporting channel remains to be established.

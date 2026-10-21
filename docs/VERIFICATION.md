@@ -8,4 +8,4 @@ Actual local environment: Linux, Python 3.12.14.
 - Broken synthetic export: expected error findings, exit status 1; JSON parsed successfully. Output: example-report.ja.json.
 - Independent review identified FIFO blocking, fragment handling, symlink ancestor and canonical shape issues; corrected with regression tests.
 
-Not tested: actual customer exports, live websites, hosting rewrites, JavaScript rendering, remote CI, Python 3.11/3.13, Windows/macOS. No external publication, user adoption, or support-program eligibility was verified.
+Not tested: actual customer exports, live websites, hosting rewrites, JavaScript rendering, remote CI, Python 3.11/3.13, Windows/macOS. Source publication was verified at https://github.com/mizuho-Te/site-preflight on 2026-10-21. Remote CI is pending; no user adoption or support-program eligibility is claimed.

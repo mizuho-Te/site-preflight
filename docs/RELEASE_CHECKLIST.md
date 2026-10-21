@@ -3,7 +3,7 @@
 This is an initial source release, not evidence of OSS community impact.
 
 Before any public release:
-- [ ] Choose a project name after checking package/repository-name conflicts.
+- [x] GitHub confirmed site-preflight available under mizuho-Te; no package registry name is claimed.
 - [ ] Review all source, documentation, generated artifacts and potential third-party rights.
 - [x] MIT license approved, attributed to the public GitHub handle mizuho-Te.
 - [x] Public release authorized; authenticated connector account is mizuho-Te. No customer repositories/data.
